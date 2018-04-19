@@ -29,12 +29,8 @@
                                 <rect key="frame" x="0.0" y="-665" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plane2" translatesAutoresizingMaskIntoConstraints="NO" id="buH-Tj-zvg" customClass="PlaneMovement" customModule="FlyingGameTry2" customModuleProvider="target">
-                                <rect key="frame" x="130" y="567" width="114" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="E-Plane1" translatesAutoresizingMaskIntoConstraints="NO" id="Eai-B8-Z35">
-                                <rect key="frame" x="124" y="20" width="120" height="99"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainPlane" translatesAutoresizingMaskIntoConstraints="NO" id="buH-Tj-zvg" customClass="PlaneMovement" customModule="FlyingGameTry2" customModuleProvider="target">
+                                <rect key="frame" x="130" y="567" width="115" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -46,7 +42,6 @@
                         <outlet property="PlaneImage" destination="buH-Tj-zvg" id="Ane-eg-n45"/>
                         <outlet property="background1" destination="fgW-2o-RPf" id="d2s-ca-uY3"/>
                         <outlet property="background2" destination="TMZ-U9-UJK" id="eZ2-CH-N3O"/>
-                        <outlet property="eplane1" destination="Eai-B8-Z35" id="bDi-1K-SS4"/>
                         <outlet property="planeImage" destination="buH-Tj-zvg" id="8kc-Bl-eaa"/>
                     </connections>
                 </viewController>
@@ -56,8 +51,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E-Plane1" width="342" height="306"/>
         <image name="GameBackground" width="500" height="650"/>
-        <image name="Plane2" width="342" height="306"/>
+        <image name="mainPlane" width="342" height="306"/>
     </resources>
 </document>
