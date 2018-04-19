@@ -67,11 +67,20 @@ class ViewController: UIViewController, planeDelegate {
         objectGravity = UIGravityBehavior(items:[enemyPlane1,enemyPlane2,enemyPlane3])
         objectGravity.magnitude = 0.3
         dynamicAnimator.addBehavior(objectGravity)
+        objectCollision = UICollisionBehavior(items:[enemyPlane1, enemyPlane2, enemyPlane3])
+        dynamicAnimator.addBehavior(objectCollision)
+        self.objectCollision.collisionDelegate = self as! UICollisionBehaviorDelegate;
+        
+        dynamicItemBehavior = UIDynamicItemBehavior(items: [enemyPlane1, enemyPlane2, enemyPlane3])
+        dynamicItemBehavior.elasticity = 0.5
+        dynamicAnimator.addBehavior(dynamicItemBehavior)
      }
     
     func planeHitbox(){
-        let hitbox =
-        
+        let pHitbox = UIView(frame:CGRect(x:planeImage.center.x-25, y:planeImage.center.y-50, width:50, height: 100))
+        view.addSubview(pHitbox)
+        self.view.bringSubview(toFront: planeImage)
+
     }
     
     
