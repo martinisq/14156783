@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA6F96D02088FD0D00611C93 /* PlaneMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F96CF2088FD0D00611C93 /* PlaneMovement.swift */; };
 		CC3DDE452088C608008BF97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE442088C608008BF97B /* AppDelegate.swift */; };
 		CC3DDE472088C608008BF97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE462088C608008BF97B /* ViewController.swift */; };
 		CC3DDE4A2088C608008BF97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3DDE482088C608008BF97B /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		CC3DDE4F2088C608008BF97B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3DDE4D2088C608008BF97B /* LaunchScreen.storyboard */; };
 		CC3DDE5A2088C609008BF97B /* FlyingGameTry2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE592088C609008BF97B /* FlyingGameTry2Tests.swift */; };
 		CC3DDE652088C609008BF97B /* FlyingGameTry2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE642088C609008BF97B /* FlyingGameTry2UITests.swift */; };
-		CC3DDE752088C681008BF97B /* PlaneMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE742088C681008BF97B /* PlaneMovement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA6F96CF2088FD0D00611C93 /* PlaneMovement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaneMovement.swift; path = ../PlaneMovement.swift; sourceTree = "<group>"; };
 		CC3DDE412088C608008BF97B /* FlyingGameTry2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyingGameTry2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3DDE442088C608008BF97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC3DDE462088C608008BF97B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		CC3DDE602088C609008BF97B /* FlyingGameTry2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyingGameTry2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3DDE642088C609008BF97B /* FlyingGameTry2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingGameTry2UITests.swift; sourceTree = "<group>"; };
 		CC3DDE662088C609008BF97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC3DDE742088C681008BF97B /* PlaneMovement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaneMovement.swift; path = ../PlaneMovement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CC3DDE442088C608008BF97B /* AppDelegate.swift */,
+				CA6F96CF2088FD0D00611C93 /* PlaneMovement.swift */,
 				CC3DDE462088C608008BF97B /* ViewController.swift */,
-				CC3DDE742088C681008BF97B /* PlaneMovement.swift */,
 				CC3DDE482088C608008BF97B /* Main.storyboard */,
 				CC3DDE4B2088C608008BF97B /* Assets.xcassets */,
 				CC3DDE4D2088C608008BF97B /* LaunchScreen.storyboard */,
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3DDE472088C608008BF97B /* ViewController.swift in Sources */,
-				CC3DDE752088C681008BF97B /* PlaneMovement.swift in Sources */,
+				CA6F96D02088FD0D00611C93 /* PlaneMovement.swift in Sources */,
 				CC3DDE452088C608008BF97B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +509,7 @@
 				CC3DDE6B2088C609008BF97B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC3DDE6C2088C609008BF97B /* Build configuration list for PBXNativeTarget "FlyingGameTry2Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +518,7 @@
 				CC3DDE6E2088C609008BF97B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC3DDE6F2088C609008BF97B /* Build configuration list for PBXNativeTarget "FlyingGameTry2UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +527,7 @@
 				CC3DDE712088C609008BF97B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

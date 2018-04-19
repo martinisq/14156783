@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17E199" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,6 +33,10 @@
                                 <rect key="frame" x="130" y="567" width="114" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="E-Plane1" translatesAutoresizingMaskIntoConstraints="NO" id="Eai-B8-Z35">
+                                <rect key="frame" x="124" y="20" width="120" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -40,6 +44,10 @@
                         <outlet property="Background1" destination="fgW-2o-RPf" id="fXw-aG-Db2"/>
                         <outlet property="Background2" destination="TMZ-U9-UJK" id="Obc-Km-ZoQ"/>
                         <outlet property="PlaneImage" destination="buH-Tj-zvg" id="Ane-eg-n45"/>
+                        <outlet property="background1" destination="fgW-2o-RPf" id="d2s-ca-uY3"/>
+                        <outlet property="background2" destination="TMZ-U9-UJK" id="eZ2-CH-N3O"/>
+                        <outlet property="eplane1" destination="Eai-B8-Z35" id="bDi-1K-SS4"/>
+                        <outlet property="planeImage" destination="buH-Tj-zvg" id="8kc-Bl-eaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -48,6 +56,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="E-Plane1" width="342" height="306"/>
         <image name="GameBackground" width="500" height="650"/>
         <image name="Plane2" width="342" height="306"/>
     </resources>
