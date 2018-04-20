@@ -16,7 +16,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     func changePlaneMovement() {
     }
     
-    
+
     @IBOutlet weak var timerLB: UILabel!
     @IBOutlet weak var score: UILabel!
 
@@ -36,7 +36,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     
     var timer = Timer()
-    var number = Int(10)
+    var number = Int(20)
     var mainScore = Int()
     
     
@@ -58,7 +58,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     }
     
     func enemyTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector:#selector(ViewController.enemyPlanes), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(ViewController.enemyPlanes), userInfo: nil, repeats: true)
     }
     
     
@@ -76,7 +76,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
         self.view.addSubview(enemyPlane1)
         
         enemyPlane2.image=UIImage(named:"eplane2")
-        enemyPlane2.frame=CGRect(x:Int(arc4random_uniform(301)),y:-900,width:80,height:95)
+        enemyPlane2.frame=CGRect(x:Int(arc4random_uniform(301)),y:-400,width:80,height:95)
         self.view.addSubview(enemyPlane2)
         
         enemyPlane3.image=UIImage(named: "eplane3")
@@ -86,14 +86,14 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
         
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         objectGravity = UIGravityBehavior(items:[enemyPlane1,enemyPlane2,enemyPlane3])
-        objectGravity.magnitude = 0.6
+        objectGravity.magnitude = 1
         dynamicAnimator.addBehavior(objectGravity)
         objectCollision = UICollisionBehavior(items:[enemyPlane1, enemyPlane2, enemyPlane3])
         dynamicAnimator.addBehavior(objectCollision)
         objectCollision.collisionDelegate = self
         
         dynamicItemBehavior = UIDynamicItemBehavior(items: [enemyPlane1, enemyPlane2, enemyPlane3])
-        dynamicItemBehavior.elasticity = 0.5
+        dynamicItemBehavior.elasticity = 0.3
         dynamicAnimator.addBehavior(dynamicItemBehavior)
      }
     
@@ -115,7 +115,9 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     //FUNCTION
     //Description: Spawns main plane's hitbox
     
+    
     func hitboxSpawn(){
+        objectCollision.removeAllBoundaries()
         let pHitbox = UIView(frame:CGRect(x:planeImage.center.x-25, y:planeImage.center.y-50, width:50, height: 80))
         //view.addSubview(pHitbox)
         //self.view.bringSubview(toFront: planeImage)
@@ -168,7 +170,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
         
         if number == 0{
             
-            present( UIStoryboard(name: "MainScreen", bundle: nil).instantiateViewController(withIdentifier: "MenuScreenViewController") as UIViewController, animated: true, completion: nil)
+            present( UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "AfterGameScreen") as UIViewController, animated: true, completion: nil)
         }
     }
     

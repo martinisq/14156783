@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlyingGameTry2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainStoryboard" id="BYZ-38-t0r" customClass="ViewController" customModule="FlyingGameTry2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,47 +29,45 @@
                                 <rect key="frame" x="0.0" y="-665" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainPlane" translatesAutoresizingMaskIntoConstraints="NO" id="buH-Tj-zvg" customClass="PlaneMovement" customModule="FlyingGameTry2" customModuleProvider="target">
-                                <rect key="frame" x="130" y="567" width="115" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i8-s0-iYr" userLabel="Score">
-                                <rect key="frame" x="329" y="28" width="42" height="21"/>
+                                <rect key="frame" x="73" y="20" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJI-9A-a3C">
-                                <rect key="frame" x="77" y="28" width="42" height="21"/>
+                                <rect key="frame" x="322" y="47" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5U-F6-hsM">
-                                <rect key="frame" x="272" y="28" width="49" height="21"/>
+                                <rect key="frame" x="16" y="20" width="49" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-3" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU9-Qi-Xcp">
-                                <rect key="frame" x="19" y="27" width="50" height="21"/>
+                                <rect key="frame" x="318" y="28" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainPlane" translatesAutoresizingMaskIntoConstraints="NO" id="buH-Tj-zvg" customClass="PlaneMovement" customModule="FlyingGameTry2" customModuleProvider="target">
+                                <rect key="frame" x="130" y="453" width="115" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="Background1" destination="fgW-2o-RPf" id="fXw-aG-Db2"/>
                         <outlet property="Background2" destination="TMZ-U9-UJK" id="Obc-Km-ZoQ"/>
-                        <outlet property="PlaneImage" destination="buH-Tj-zvg" id="Ane-eg-n45"/>
-                        <outlet property="background1" destination="fgW-2o-RPf" id="d2s-ca-uY3"/>
-                        <outlet property="background2" destination="TMZ-U9-UJK" id="eZ2-CH-N3O"/>
                         <outlet property="planeImage" destination="buH-Tj-zvg" id="8kc-Bl-eaa"/>
                         <outlet property="score" destination="aJI-9A-a3C" id="nrd-CQ-CNa"/>
                         <outlet property="timerLB" destination="8i8-s0-iYr" id="0XA-uH-mA8"/>
@@ -77,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-895" y="126"/>
+            <point key="canvasLocation" x="-888.79999999999995" y="92.203898050974516"/>
         </scene>
     </scenes>
     <resources>

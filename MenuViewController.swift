@@ -8,14 +8,31 @@
 
 import UIKit
 
-class MenuViewController: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class MenuViewController: UIViewController {
+    
+   
+    @IBAction func replayButton(_ sender: UIButton) {
+        let mainSB = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let viewcontroller : ViewController = mainSB.instantiateViewController(withIdentifier: "MainStoryboard") as! ViewController
+        mainScore = 0
+        self.present(viewcontroller, animated: true, completion: nil)
+        
     }
-    */
-
+    
+    override func viewDidLoad() {
+        
+        
+        super.viewDidLoad()
+        
+        lastscore.text=String(mainScore)
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
 }
+}
+    
