@@ -42,7 +42,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     
     var timer = Timer()
-    var number = Int(20)
+    var number = Int(5) //Duration of the game
     
     
     
@@ -54,30 +54,29 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
         TimerLabel.layer.cornerRadius = 8
         
         ScoreLabel.layer.borderWidth = 1.0
-        TimerLabel.layer.cornerRadius = 8
+        ScoreLabel.layer.cornerRadius = 8
+        
+        planeImage.planeDeleg = self
         
         
-        //backgroundLoop()
+        //FUNCTION INITIALIZATIONS
         enemyPlanes()
         enemyTimer()
         hitboxSpawn()
         hitboxTimer()
-        
         gameTimer()
         gameLength()
-        
         scoreTimer()
         
-        planeImage.planeDeleg = self
     }
     
+    
+    
+    //FUNCTION
+    //Description: Frequency of enemy plane spawns
     func enemyTimer(){
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(ViewController.enemyPlanes), userInfo: nil, repeats: true)
     }
-    
-    
-    
-    
     
     
     //FUNCTION
@@ -118,7 +117,6 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     //FUNCTION
     //Description: Timer of the hitbox
-    
     func hitboxTimer(){
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.hitboxSpawn), userInfo: nil, repeats: true)
     }
@@ -127,26 +125,25 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     
     //FUNCTION
-    //Description: Spawns main plane's hitbox
-    
-    
+    //Description: Spawns main plane's hitbox | If planes collide, player will lose X amount of points
     func hitboxSpawn(){
         objectCollision.removeAllBoundaries()
         let pHitbox = UIView(frame:CGRect(x:planeImage.center.x-25, y:planeImage.center.y-50, width:50, height: 80))
-        //view.addSubview(pHitbox)
-        //self.view.bringSubview(toFront: planeImage)
-        
         objectCollision.addBoundary(withIdentifier: "pHitbox" as NSCopying, for: UIBezierPath(rect:pHitbox.frame))
         dynamicAnimator.addBehavior(objectCollision)
         objectCollision.collisionDelegate = self
         
         if(pHitbox.frame.intersects(enemyPlane1.frame)) || (pHitbox.frame.intersects(enemyPlane2.frame)) || (pHitbox.frame.intersects(enemyPlane3.frame)){
-            mainScore = mainScore - 10
+            mainScore = mainScore - 15
             score.text = String(mainScore)
         }
         
     }
 
+    
+    
+    //FUNCTION
+    //Description: Score grant frequency | Every X seconds, player will gain X amount of points
     func scoreTimer(){
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ViewController.gameScore), userInfo: nil, repeats: true)
     }
@@ -175,6 +172,8 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
   
     
     
+    //FUNCTION
+    //Description:
     func gameTimer(){
         timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(ViewController.gameLength),userInfo:nil, repeats: true )    }
     
@@ -189,16 +188,6 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     }
     
     
-    
-    
-    //func backgroundLoop(){
-        //UIView.animate(withDuration: 5, delay:0.0, options:[UIViewAnimationOptions.repeat, .curveLinear], animations: {
-            
-            //self.background1.center.y += self.view.bounds.height
-            //self.background2.center.y += self.view.bounds.height
-            
-        //})
-        
     
     
     override func viewDidAppear(_ animated: Bool) {
