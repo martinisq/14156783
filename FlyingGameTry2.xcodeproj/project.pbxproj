@@ -10,8 +10,6 @@
 		CA6F96D02088FD0D00611C93 /* PlaneMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F96CF2088FD0D00611C93 /* PlaneMovement.swift */; };
 		CA82ED2C2089B96E0012FBF0 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA82ED2B2089B96E0012FBF0 /* Menu.storyboard */; };
 		CA82ED302089F8A70012FBF0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82ED2D2089B9A50012FBF0 /* MenuViewController.swift */; };
-		CA82ED32208A05340012FBF0 /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA82ED31208A05340012FBF0 /* StartScreen.storyboard */; };
-		CA82ED34208A05F80012FBF0 /* StartScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82ED33208A05F80012FBF0 /* StartScreenController.swift */; };
 		CC3DDE452088C608008BF97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE442088C608008BF97B /* AppDelegate.swift */; };
 		CC3DDE472088C608008BF97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DDE462088C608008BF97B /* ViewController.swift */; };
 		CC3DDE4A2088C608008BF97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3DDE482088C608008BF97B /* Main.storyboard */; };
@@ -42,8 +40,6 @@
 		CA6F96CF2088FD0D00611C93 /* PlaneMovement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaneMovement.swift; path = ../PlaneMovement.swift; sourceTree = "<group>"; };
 		CA82ED2B2089B96E0012FBF0 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = ../Menu.storyboard; sourceTree = "<group>"; };
 		CA82ED2D2089B9A50012FBF0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
-		CA82ED31208A05340012FBF0 /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StartScreen.storyboard; path = ../StartScreen.storyboard; sourceTree = "<group>"; };
-		CA82ED33208A05F80012FBF0 /* StartScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartScreenController.swift; path = ../StartScreenController.swift; sourceTree = "<group>"; };
 		CC3DDE412088C608008BF97B /* FlyingGameTry2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyingGameTry2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3DDE442088C608008BF97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC3DDE462088C608008BF97B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,11 +107,9 @@
 				CA6F96CF2088FD0D00611C93 /* PlaneMovement.swift */,
 				CA82ED2D2089B9A50012FBF0 /* MenuViewController.swift */,
 				CC3DDE462088C608008BF97B /* ViewController.swift */,
-				CA82ED33208A05F80012FBF0 /* StartScreenController.swift */,
 				CC3DDE4D2088C608008BF97B /* LaunchScreen.storyboard */,
 				CC3DDE482088C608008BF97B /* Main.storyboard */,
 				CA82ED2B2089B96E0012FBF0 /* Menu.storyboard */,
-				CA82ED31208A05340012FBF0 /* StartScreen.storyboard */,
 				CC3DDE4B2088C608008BF97B /* Assets.xcassets */,
 				CC3DDE502088C608008BF97B /* Info.plist */,
 			);
@@ -251,7 +245,6 @@
 				CC3DDE4C2088C608008BF97B /* Assets.xcassets in Resources */,
 				CC3DDE4A2088C608008BF97B /* Main.storyboard in Resources */,
 				CA82ED2C2089B96E0012FBF0 /* Menu.storyboard in Resources */,
-				CA82ED32208A05340012FBF0 /* StartScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +272,6 @@
 				CC3DDE472088C608008BF97B /* ViewController.swift in Sources */,
 				CA6F96D02088FD0D00611C93 /* PlaneMovement.swift in Sources */,
 				CC3DDE452088C608008BF97B /* AppDelegate.swift in Sources */,
-				CA82ED34208A05F80012FBF0 /* StartScreenController.swift in Sources */,
 				CA82ED302089F8A70012FBF0 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

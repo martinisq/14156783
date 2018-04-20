@@ -19,6 +19,10 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     }
     
 
+    @IBOutlet weak var ScoreLabel: UILabel!
+    @IBOutlet weak var TimerLabel: UILabel!
+    
+    
     @IBOutlet weak var timerLB: UILabel!
     @IBOutlet weak var score: UILabel!
 
@@ -38,14 +42,22 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     
     var timer = Timer()
-    var number = Int(5)
+    var number = Int(20)
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        backgroundLoop()
+        
+        TimerLabel.layer.borderWidth = 1.0
+        TimerLabel.layer.cornerRadius = 8
+        
+        ScoreLabel.layer.borderWidth = 1.0
+        TimerLabel.layer.cornerRadius = 8
+        
+        
+        //backgroundLoop()
         enemyPlanes()
         enemyTimer()
         hitboxSpawn()
@@ -88,7 +100,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
         
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         objectGravity = UIGravityBehavior(items:[enemyPlane1,enemyPlane2,enemyPlane3])
-        objectGravity.magnitude = 1
+        objectGravity.magnitude = 0.4
         dynamicAnimator.addBehavior(objectGravity)
         objectCollision = UICollisionBehavior(items:[enemyPlane1, enemyPlane2, enemyPlane3])
         dynamicAnimator.addBehavior(objectCollision)
@@ -129,7 +141,7 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
         objectCollision.collisionDelegate = self
         
         if(pHitbox.frame.intersects(enemyPlane1.frame)) || (pHitbox.frame.intersects(enemyPlane2.frame)) || (pHitbox.frame.intersects(enemyPlane3.frame)){
-            mainScore = mainScore - 50
+            mainScore = mainScore - 10
             score.text = String(mainScore)
         }
         
@@ -140,23 +152,23 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     }
     
     func gameScore(){
-        let enemyPlaneX = enemyPlane1.convert(enemyPlane1.center, to:self.view)
-        let enemyPlane2X = enemyPlane2.convert(enemyPlane2.center, to:self.view)
-        let enemyPlane3X = enemyPlane3.convert(enemyPlane3.center, to: self.view)
+        let enemyPlaneY = enemyPlane1.convert(enemyPlane1.center, to:self.view)
+        let enemyPlane2Y = enemyPlane2.convert(enemyPlane2.center, to:self.view)
+        let enemyPlane3Y = enemyPlane3.convert(enemyPlane3.center, to: self.view)
         
         let object = planeImage.convert(enemyPlane1.center, to:self.view)
-        if enemyPlaneX.y >= object.y{
-            mainScore = mainScore + 15
+        if enemyPlaneY.y >= object.y{
+            mainScore = mainScore + 20
             score.text = String(mainScore)
         }
         
-        if enemyPlane2X.y >= object.y{
-            mainScore = mainScore + 15
+        if enemyPlane2Y.y >= object.y{
+            mainScore = mainScore + 20
             score.text = String(mainScore)
         }
         
-        if enemyPlane3X.y >= object.y{
-            mainScore = mainScore + 15
+        if enemyPlane3Y.y >= object.y{
+            mainScore = mainScore + 20
             score.text = String(mainScore)
         }
     }
@@ -179,14 +191,26 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     
     
-    func backgroundLoop(){
-        UIView.animate(withDuration: 5, delay:0.0, options:[UIViewAnimationOptions.repeat, .curveLinear], animations: {
+    //func backgroundLoop(){
+        //UIView.animate(withDuration: 5, delay:0.0, options:[UIViewAnimationOptions.repeat, .curveLinear], animations: {
             
+            //self.background1.center.y += self.view.bounds.height
+            //self.background2.center.y += self.view.bounds.height
+            
+        //})
+        
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 5, delay:0.0, options:[UIViewAnimationOptions.repeat, .curveLinear], animations: {
             self.background1.center.y += self.view.bounds.height
             self.background2.center.y += self.view.bounds.height
-            
         })
     }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
