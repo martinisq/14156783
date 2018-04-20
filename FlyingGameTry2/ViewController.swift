@@ -11,6 +11,8 @@ protocol planeDelegate {
     func changePlaneMovement()
 }
 
+    var mainScore = Int()
+
 class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelegate {
     
     func changePlaneMovement() {
@@ -36,8 +38,8 @@ class ViewController: UIViewController, planeDelegate, UICollisionBehaviorDelega
     
     
     var timer = Timer()
-    var number = Int(20)
-    var mainScore = Int()
+    var number = Int(5)
+    
     
     
     override func viewDidLoad() {
